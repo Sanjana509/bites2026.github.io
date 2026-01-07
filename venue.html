@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BITES Workshop 2026 - Home</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#004080',       
+            secondary: '#0073e6', 
+            accent: '#f39c12',       
+            darkbg: '#020617',       
+            lightgray: '#f5f5f5'
+          }
+        }
+      }
+    };
+  </script>
+
+
+  <style type="text/tailwindcss">
+    @layer components {
+      .nav-link {
+        @apply px-3 py-2 rounded-full text-slate-100 hover:text-accent hover:bg-white/10 transition text-sm font-medium;
+      }
+      .active-tab {
+        @apply bg-white text-primary pointer-events-none cursor-default shadow-md;
+      }
+
+      .hero-overlay {
+        background: linear-gradient(180deg, rgba(0,64,128,0.2) 0%, rgba(2,6,23,0.95) 90%);
+      }
+    }
+  </style>
+</head>
+<body class="bg-lightgray dark:bg-darkbg dark:text-white antialiased">
+  <div class="min-h-screen flex flex-col">
+
+
+    <header class="fixed top-0 inset-x-0 z-50">
+      <div class="mx-auto max-w-6xl mt-4 px-4 sm:px-6 lg:px-8">
+        <div class="backdrop-blur-md bg-primary/90 dark:bg-slate-900/80 border border-white/10 rounded-2xl shadow-lg">
+          <div class="flex items-center justify-between px-4 py-3 sm:px-6">
+
+            <a href="index.html" class="flex items-center gap-2">
+              <div class="h-9 w-9 rounded-xl bg-gradient-to-br from-secondary to-accent flex items-center justify-center text-white font-bold text-lg shadow-md">
+                B
+              </div>
+              <div class="flex flex-col leading-tight">
+                <span class="text-white font-semibold text-lg tracking-wide">
+                  BITES 2026
+                </span>
+                <span class="text-xs text-slate-200/80">
+                  Blockchain · IoT · Energy
+                </span>
+              </div>
+            </a>
+
+
+            <nav class="hidden md:flex items-center gap-4">
+              <a href="index.html" class="nav-link">Home</a>
+              <a href="call-for-papers.html" class="nav-link active-tab">Call for Papers</a>
+              <a href="committees.html" class="nav-link">Committees</a>
+              <a href="submission.html" class="nav-link">Paper Submission</a>
+              <a href="venue.html" class="nav-link">Venue</a>
+            </nav>
+
+
+            <button id="mobileBtn" class="md:hidden text-slate-50 text-2xl">☰</button>
+          </div>
+
+
+          <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 px-4 pb-4 space-y-2 text-sm">
+            <a href="index.html" class="block py-1.5 nav-link">Home</a>
+            <a href="call-for-papers.html" class="block py-1.5 nav-link active-tab">Call for Papers</a>
+            <a href="committees.html" class="block py-1.5 nav-link">Committees</a>
+            <a href="submission.html" class="block py-1.5 nav-link">Paper Submission</a>
+            <a href="venue.html" class="block py-1.5 nav-link">Venue</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      const mobileBtn = document.getElementById('mobileBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileBtn?.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+
+
+<section class="relative w-full h-[600px] lg:h-[700px] bg-cover flex flex-col justify-center"
+         style="background-image: url('assets/background.png.webp'); background-position: center top;">
+  
+
+  <div class="absolute inset-0 hero-overlay"></div>
+
+
+  <div class="relative z-10 w-full max-w-3xl mx-auto px-6 text-center lg:text-left -mt-16">
+    <div class="bg-primary/95 backdrop-blur-sm p-8 rounded-lg shadow-2xl border-t-4 border-accent">
+      
+      <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">
+        BITES 2026
+      </h1>
+      
+      <p class="text-lg md:text-xl text-slate-200 mb-6 font-light">
+        Blockchain, IoT, and Sustainable Energy for a Greener Future
+      </p>
+
+      <div class="flex flex-col md:flex-row gap-6 md:gap-12 text-white/90 text-sm font-medium mb-8 border-t border-white/20 pt-6">
+        <div>
+          <span class="block text-xs text-accent uppercase tracking-wider mb-1">Location</span>
+          Brisbane, Australia
+        </div>
+        <div>
+          <span class="block text-xs text-accent uppercase tracking-wider mb-1">Dates</span>
+          1–5 June 2026
+        </div>
+        <div>
+          <span class="block text-xs text-accent uppercase tracking-wider mb-1">Host Event</span>
+          IEEE ICBC 2026
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+    <main class="flex-1 bg-lightgray dark:bg-darkbg pt-0 pb-20">
+      
+
+  <section class="max-w-5xl mx-auto px-6 mb-16 text-center md:text-left -mt-8 relative z-20">
+    <h2 class="text-3xl font-bold text-primary dark:text-sky-300 mb-4">
+      Workshop Venue
+    </h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3 text-justify">
+          Brisbane, Australia
+        </p>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3 text-justify">
+          Brisbane is the capital of Queensland, a sun-drenched city renowned for its outdoor lifestyle and vibrant riverfront. It's a city with a unique blend of modern development and lush natural landscapes.
+        </p>
+        
+        
+      </section>
+
+
+
+
+    </main>
+
+
+    <footer class="bg-darkbg text-slate-300 text-sm py-8 border-t border-white/10">
+      <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p>
+          &copy; 2026 BITES Workshop. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
